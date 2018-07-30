@@ -22,11 +22,11 @@ for t in range(0, int(T)):
             user_score += 50
             continue
 
-        # get angle [0,2pi)
-        rad = (math.atan2(y, x) + 2 * math.pi) % (math.pi * 2)
-
-        num = (rad + math.pi / len(scores)) % (math.pi * 2) * 10 / math.pi
-        num = int(num % 20)
+        theta = math.atan2(y, x)
+        theta *= (180 / math.pi)
+        theta += 9
+        theta = (theta + 360) % 360
+        num = int(theta / 18)
         score = scores[num]
 
         if d > D and d < E:  # double
