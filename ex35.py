@@ -23,3 +23,5 @@ for t in range(0, int(T)):
     print('Case #%d' % (int(t) + 1))
     print(Answer)
 inf.close()
+
+# 나무의 길이가 늘어나는 것 대신에 레이저의 높이가 낮아지는 것으로 생각
